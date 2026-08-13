@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#FAF4E8"/>
+  <g transform="translate(532,320) scale(0.7)">
+    <rect width="192" height="192" rx="42" fill="#FAF4E8" stroke="#E5DAC6" stroke-width="4"/>
+    <circle cx="52" cy="140" r="17" fill="#2F7D5D"/><circle cx="96" cy="140" r="17" fill="#2F6E8F"/>
+    <circle cx="140" cy="140" r="17" fill="#8F5B2F"/><circle cx="52" cy="96" r="17" fill="#5D5A8F"/>
+    <circle cx="96" cy="96" r="17" fill="#8F2F55"/><circle cx="96" cy="52" r="17" fill="#4A7A2F"/>
+  </g>
+  <text x="600" y="570" text-anchor="middle" font-family="Geeza Pro, Arial" font-size="56" font-weight="bold" fill="#3D3428">التعليم الأولي للطفل العربي</text>
+  <text x="600" y="650" text-anchor="middle" font-family="Geeza Pro, Arial" font-size="27" fill="#7A6E5D">القراءة والحساب والكتابة والإنكليزية — مجاناً، بلا إعلانات، بخصوصية مطلقة</text>
+  <text x="600" y="700" text-anchor="middle" font-family="Geeza Pro, Arial" font-size="26" fill="#7A6E5D">وتعمل دون إنترنت &#160;·&#160; learn.mishkat.qa</text>
+</svg>

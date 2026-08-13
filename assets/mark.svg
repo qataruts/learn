@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <!-- علامة عائلة التعليم الأولي: ستُّ نقاطٍ بألوان التطبيقات الستة تصعد كدرَج،
+       على ورق العائلة الدافئ — هندسةٌ بلا خطٍّ فتصحّ أيقونةً في كل مقاس -->
+  <rect width="192" height="192" rx="42" fill="#FAF4E8"/>
+  <rect x="10" y="10" width="172" height="172" rx="34" fill="none" stroke="#E5DAC6" stroke-width="4"/>
+  <circle cx="52"  cy="140" r="17" fill="#2F7D5D"/>
+  <circle cx="96"  cy="140" r="17" fill="#2F6E8F"/>
+  <circle cx="140" cy="140" r="17" fill="#8F5B2F"/>
+  <circle cx="52"  cy="96"  r="17" fill="#5D5A8F"/>
+  <circle cx="96"  cy="96"  r="17" fill="#8F2F55"/>
+  <circle cx="96"  cy="52"  r="17" fill="#4A7A2F"/>
+</svg>

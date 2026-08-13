@@ -4,7 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>التعليم الأولي للطفل العربي — عائلة مشكاة</title>
-<meta name="description" content="عائلة تطبيقات تعليمية للطفل العربي: القراءة والحساب والكتابة والإنكليزية — مجاناً، بلا إعلانات، بخصوصية مطلقة، وتعمل دون إنترنت.">
+<meta name="description" content="ستة تطبيقات تعليمية للطفل العربي: القراءة والحساب والكتابة والإنكليزية وتثبيت الحفظ والتلاوة — مجاناً، بلا إعلانات، بخصوصية مطلقة، وتعمل دون إنترنت.">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<meta name="theme-color" content="#FAF4E8">
+<!-- بطاقة المشاركة (واتساب وأخواته) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_QA">
+<meta property="og:site_name" content="عائلة التعليم الأولي — مشكاة">
+<meta property="og:title" content="التعليم الأولي للطفل العربي">
+<meta property="og:description" content="ستة تطبيقات: القراءة والحساب والكتابة والإنكليزية وتثبيت الحفظ والتلاوة — مجاناً، بلا إعلانات، بخصوصية مطلقة، وتعمل دون إنترنت.">
+<meta property="og:url" content="https://learn.mishkat.qa/">
+<meta property="og:image" content="https://learn.mishkat.qa/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 @font-face {
   font-family: 'Cairo';
@@ -23,14 +37,16 @@
 body {
   margin: 0; background: var(--paper); color: var(--ink);
   font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
-  font-size: clamp(16px, 2.2vw, 19px); line-height: 1.9;
+  font-size: clamp(16px, 2.2vw, 19px); line-height: 1.95;
 }
-header { text-align: center; padding: 3.5rem 1.25rem 2rem; }
+header.hero { text-align: center; padding: 3.2rem 1.25rem 1.8rem; }
+.mark { width: 84px; height: 84px; margin-bottom: .8rem; }
 h1 { font-size: clamp(1.7rem, 5vw, 2.6rem); font-weight: 800; margin: 0 0 .6rem; }
-.lede { max-width: 42rem; margin: 0 auto; color: var(--ink-soft); font-size: 1.06em; }
+.lede { max-width: 44rem; margin: 0 auto; color: var(--ink-soft); font-size: 1.06em; }
 main { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; }
-section { margin-top: 2.8rem; }
-h2 { font-size: 1.35rem; font-weight: 800; margin: 0 0 1.1rem; }
+section { margin-top: 3rem; }
+h2 { font-size: 1.4rem; font-weight: 800; margin: 0 0 .4rem; }
+.sec-lede { color: var(--ink-soft); margin: 0 0 1.2rem; max-width: 46rem; }
 .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1.1rem; }
 .app {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
@@ -38,11 +54,9 @@ h2 { font-size: 1.35rem; font-weight: 800; margin: 0 0 1.1rem; }
   display: flex; flex-direction: column; gap: .55rem;
 }
 .app-head { display: flex; align-items: center; gap: .8rem; }
-.app-head img, .app-head .ph {
-  width: 56px; height: 56px; border-radius: 14px; flex: none;
-}
+.app-head img, .app-head .ph { width: 56px; height: 56px; border-radius: 14px; flex: none; }
 .ph {
-  display: grid; place-items: center; font-weight: 800; font-size: 1.5rem;
+  display: grid; place-items: center; font-weight: 800; font-size: 1.4rem;
   background: var(--paper-deep); color: var(--ac); border: 1px dashed var(--line);
 }
 .app h3 { margin: 0; font-size: 1.25rem; font-weight: 800; }
@@ -56,16 +70,14 @@ h2 { font-size: 1.35rem; font-weight: 800; margin: 0 0 1.1rem; }
   margin-top: auto; align-self: flex-start; font-weight: 700; color: var(--ac);
   text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: .05rem;
 }
-.pledges { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .9rem; }
-.pledge {
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1rem; }
+.blk {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 1rem 1.15rem;
+  padding: 1.1rem 1.25rem;
 }
-.pledge b { display: block; margin-bottom: .15rem; }
-.pledge span { color: var(--ink-soft); font-size: .92em; }
-.centers {
-  background: var(--paper-deep); border-radius: var(--radius); padding: 1.6rem 1.5rem;
-}
+.blk b { display: block; margin-bottom: .25rem; font-size: 1.02em; }
+.blk p { margin: 0; color: var(--ink-soft); font-size: .93em; }
+.centers { background: var(--paper-deep); border-radius: var(--radius); padding: 1.6rem 1.5rem; }
 .centers p { margin: .4rem 0 0; color: var(--ink-soft); }
 .centers a { color: var(--ink); font-weight: 700; }
 footer {
@@ -73,22 +85,24 @@ footer {
   padding: 2rem 1rem 2.5rem; border-top: 1px solid var(--line); margin-top: 3rem;
 }
 footer a { color: inherit; }
-@media print { .app a.go { border: 0; } }
 </style>
 </head>
 <body>
 
-<header>
+<header class="hero">
+  <img class="mark" src="assets/mark.svg" alt="علامة عائلة التعليم الأولي" width="84" height="84">
   <h1>التعليم الأولي للطفل العربي</h1>
   <p class="lede">عائلةُ تطبيقاتٍ تأخذ الطفلَ من أول حرفٍ وأول عددٍ إلى القراءة والحساب
-  والكتابة — بمنهجٍ مقيسٍ خطوةً خطوة، <b>مجاناً، بلا إعلانات، بخصوصيةٍ مطلقة، وتعمل دون
-  إنترنت</b>. من مشكاة، قطر.</p>
+  والكتابة — بمنهجٍ مبنيٍّ على علمٍ راسخ ومقيسٍ خطوةً خطوة، <b>مجاناً، بلا إعلانات،
+  بخصوصيةٍ مطلقة، وتعمل دون إنترنت</b>. من مشكاة، قطر.</p>
 </header>
 
 <main>
 
 <section>
-  <h2>التطبيقات</h2>
+  <h2>التطبيقات الستة</h2>
+  <p class="sec-lede">مساران: مسارُ العربية والقرآن (اقرأ ← اكتب ← اتقن ← رتل)،
+  ومسارُ المهارات (احسب والإنكليزية) — ولكل تطبيقٍ صفحتُه التعريفية المفصّلة.</p>
   <div class="apps">
 
     <article class="app" style="--ac: var(--read)">
@@ -97,7 +111,8 @@ footer a { color: inherit; }
         <div><h3>اِقْرَأْ</h3> <span class="chip chip--live">حيٌّ الآن</span></div>
       </div>
       <p>يعلّم قراءةَ العربية من الحرف الأول إلى قراءة القرآن — على أساس القاعدة
-      النورانية، ولا يُعرَض على الطفل حرفٌ أو كلمةٌ لم يتعلم مكوّناتها بعد.</p>
+      النورانية، بترتيب الحروف على كثرة استعمالها، وكلماتٍ من عالم الطفل. ولا يُعرَض
+      على الطفل حرفٌ أو علامةٌ لم يتعلمها بعد — يفرض ذلك فاحصٌ آليّ على المحتوى كلِّه.</p>
       <a class="go" href="https://read.mishkat.qa/welcome/">صفحتُه التعريفية ←</a>
     </article>
 
@@ -106,8 +121,9 @@ footer a { color: inherit; }
         <img src="assets/calc.png" alt="أيقونة احسب" width="56" height="56">
         <div><h3>اِحْسِبْ</h3> <span class="chip chip--live">حيٌّ الآن</span></div>
       </div>
-      <p>الحسُّ العددي قبل الرمز: من إدراك الكمّ والعدّ، إلى قراءة الأرقام
-      والمقارنة، إلى الجمع والطرح ضمن العشرين — كلُّ عددٍ كميةٌ قبل أن يكون رمزاً.</p>
+      <p>الحسُّ العددي قبل الرمز: يبدأ الطفلُ بإدراك الكمّ والعدّ باللمس، ثم يقرأ
+      الأرقامَ ويقارن، ثم يركّب الأعداد ويفكّها، فيبلغ الجمعَ والطرح ضمن العشرين —
+      كلُّ عددٍ كميةٌ محسوسة قبل أن يكون رمزاً مكتوباً.</p>
       <a class="go" href="https://calc.mishkat.qa/welcome/">صفحتُه التعريفية ←</a>
     </article>
 
@@ -117,7 +133,8 @@ footer a { color: inherit; }
         <div><h3>اُكْتُبْ</h3> <span class="chip">في مراحله المتقدمة</span></div>
       </div>
       <p>الكتابةُ بالقلم على الشاشة: من التهيئة الحركية والمسكة الأولى، إلى رسم
-      الحروف، إلى الأشكال الموصولة — وأثرُ قلم الطفل لا يغادر جهازه أبداً.</p>
+      الحروف باتجاهاتها الصحيحة، إلى الأشكال الموصولة — قلبِ الكتابة العربية.
+      وأثرُ قلم الطفل لا يغادر جهازَه أبداً.</p>
     </article>
 
     <article class="app" style="--ac: var(--english)">
@@ -125,7 +142,8 @@ footer a { color: inherit; }
         <span class="ph" style="--ac: var(--english)">E</span>
         <div><h3>الإنكليزية</h3> <span class="chip">قيد البناء</span></div>
       </div>
-      <p>الإنكليزيةُ لغةً ثانية لطفلٍ عربيّ: السمعُ والفهم قبل الحرف، ثم قراءةٌ
+      <p>الإنكليزيةُ لغةً ثانية لطفلٍ عربيّ — لا ترجمةَ منهجِ الناطقين بها: مساران
+      مقترنان، السمعُ والفهم أولاً (يسمع ويلمس وينفّذ قبل أن يرى حرفاً)، والقراءةُ
       بمنهج الصوتيات المتدرج — ولا تُعرَض للقراءة كلمةٌ لم يتقنها الطفل سمعاً.</p>
     </article>
 
@@ -134,7 +152,10 @@ footer a { color: inherit; }
         <span class="ph" style="--ac: var(--atqin)">اتـ</span>
         <div><h3>اِتْقِنْ</h3> <span class="chip">قادم</span></div>
       </div>
-      <p>تثبيتُ حفظ القرآن ومراجعتُه المنظّمة — يكمل رحلةَ «اقرأ» لمن أتمّها.</p>
+      <p>يستلم الطفلَ حيث تركه «اقرأ»: صار يقرأ المصحف — فكيف يحفظ ولا ينسى؟
+      خطةُ حفظٍ سورةً سورة، ومراجعةٌ متباعدة منظّمة تعرف ما استقرّ في صدره وما
+      يوشك أن يتفلّت فتعيده في وقته — وهي القاعدةُ العلمية نفسُها التي تثبّت الحروفَ
+      في اقرأ، مطبَّقةً على الحفظ. ولوحةٌ لوليّ الأمر تريه حفظَ طفله بصدق.</p>
     </article>
 
     <article class="app" style="--ac: var(--rattil)">
@@ -142,7 +163,10 @@ footer a { color: inherit; }
         <span class="ph" style="--ac: var(--rattil)">رتـ</span>
         <div><h3>رَتِّلْ</h3> <span class="chip">قادم</span></div>
       </div>
-      <p>التلاوةُ والتجويد: يسمع الطفلُ التلاوةَ المتقنة ويتدرب على مثالها.</p>
+      <p>تحسينُ التلاوة على مثال القارئ المتقن: يسمع الطفلُ الآيةَ بترتيلٍ مجوَّد،
+      ويردّدها بصوته ويسمع نفسَه فيقارن، وأحكامُ التجويد تُبنى تدريجاً كما بُنيت
+      الحروفُ — قاعدةً قاعدةً بقياسٍ لا تلقيناً. وتسجيلُ صوت الطفل — كعهد العائلة —
+      لا يغادر جهازَه أبداً.</p>
     </article>
 
   </div>
@@ -150,29 +174,76 @@ footer a { color: inherit; }
 
 <section>
   <h2>عهودٌ واحدة في العائلة كلِّها</h2>
-  <div class="pledges">
-    <div class="pledge"><b>مجانيةٌ بلا إعلانات</b><span>لا اشتراك ولا شراءات ولا إعلانَ يراه طفل.</span></div>
-    <div class="pledge"><b>خصوصيةٌ مطلقة</b><span>لا حساب ولا تتبّع ولا جمعَ بيانات — وصوتُ الطفل وقلمُه لا يغادران جهازَه أبداً.</span></div>
-    <div class="pledge"><b>تعمل دون إنترنت</b><span>بعد أول فتحٍ متصل، يعمل التطبيق كاملاً في السيارة وفي صفٍّ بلا شبكة.</span></div>
-    <div class="pledge"><b>منهجٌ مقيس</b><span>كلُّ مهارةٍ تُقاس وتُراجَع ببوابات إتقان، ولوليّ الأمر لوحةٌ تريه أين طفلُه بصدق.</span></div>
-    <div class="pledge"><b>تُمتحَن بأيدي أطفالٍ حقيقيين</b><span>كلُّ تطبيقٍ يجرّبه أطفالٌ قبل أهله، وملاحظاتُ الميدان تحكم على البناء لا العكس.</span></div>
-    <div class="pledge"><b>واجهةٌ عربيةٌ لوليّ الأمر</b><span>صُنعت للطفل العربي وأهلِه أولاً — لا ترجمةَ تطبيقٍ غربيّ.</span></div>
+  <p class="sec-lede">ليست شعاراتِ تسويق — كلُّ عهدٍ منها مبنيٌّ في هندسة التطبيقات
+  نفسِها، وتفحصه برامجُ حراسةٍ آلية قبل كل نشرة.</p>
+  <div class="grid2">
+    <div class="blk"><b>مجانيةٌ بلا إعلانات — الآن ودائماً</b>
+      <p>لا اشتراك، ولا شراءاتٍ داخلية، ولا إعلانَ يراه طفل. قد نستقبل دعماً
+      للمشروع يوماً — لكن التطبيقات تبقى مجانيةً كاملةً كما وُعد بها.</p></div>
+    <div class="blk"><b>خصوصيةٌ مطلقة — بالبنية لا بالوعد</b>
+      <p>لا حساب، ولا تسجيل، ولا تتبّع، ولا جمعَ بياناتٍ من أي نوع. وصوتُ الطفل
+      حين يقرأ، وأثرُ قلمه حين يكتب — يُخزَّنان في جهازه ولا يغادرانه أبداً:
+      الوحداتُ التي تحملهما لا تعرف الشبكةَ أصلاً في شيفرتها، وبرنامجُ فحصٍ يثبت
+      صفرَ طلباتٍ شبكية في دورة التسجيل كلِّها.</p></div>
+    <div class="blk"><b>تعمل دون إنترنت — كاملةً</b>
+      <p>بعد أول فتحٍ متصل يخزّن التطبيقُ أصواتَه وقصصَه ودروسَه كلَّها في الجهاز،
+      ثم يعمل في السيارة وفي البرّ وفي صفٍّ بلا شبكة. وتقدّمُ الطفل محفوظٌ في
+      جهازه هو — لا في حسابٍ على خادمٍ عندنا.</p></div>
+    <div class="blk"><b>منهجٌ مقيسٌ ببوابات إتقان</b>
+      <p>كلُّ مهارةٍ يتعلمها الطفل تُقاس وتدخل صناديقَ مراجعةٍ متباعدة (كلما ثبتت
+      تباعد موعدُها)، وبين المراحل بواباتُ إتقانٍ لا تُعبَر إلا بأدائها — بلا رسوبٍ
+      ولا عقاب: ما لم يثبت يُعاد بناؤه بلطف. ولوليّ الأمر لوحةٌ تقول أين يتعثر
+      طفلُه بالضبط، لا كم أصاب.</p></div>
+    <div class="blk"><b>تُمتحَن بأيدي أطفالٍ حقيقيين</b>
+      <p>قبل أهلِها وبعدهم: كلُّ تطبيقٍ يجرّبه أطفالٌ على أجهزةٍ حقيقية، وكلُّ
+      ملاحظةِ طفلٍ — توقّفةٌ عند زرٍّ لم يفهمه، صوتٌ تقطّع — تُقيَّد بحروفها وتفتح
+      عملَ إصلاحٍ مسمّىً لا يُغلَق إلا بعودة الطفل نفسِه راضياً.</p></div>
+    <div class="blk"><b>عربيةُ الواجهة، لا تعريبَ واجهة</b>
+      <p>صُنعت للطفل العربي وأهله من أول سطر: الواجهةُ والمنهجُ والصوتُ عربية
+      أصيلة — حتى تطبيقُ الإنكليزية واجهةُ وليّ الأمر فيه عربية. والطفلُ الذي
+      لا يقرأ بعدُ يشغّل كلَّ شيءٍ باللمس والسمع، لا بقراءة أزرار.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>كيف يُبنى المنهج؟</h2>
+  <p class="sec-lede">أربعةُ أصولٍ من علم التعلّم، تسري في العائلة كلِّها —
+  والتفصيلُ لكل تطبيقٍ في صفحة «الأسس» من مرجعه التعريفي.</p>
+  <div class="grid2">
+    <div class="blk"><b>لا يُعرَض على الطفل ما لم يبلغه</b>
+      <p>في اقرأ لا يرى الطفلُ حرفاً لم يتعلمه؛ وفي احسب لا يرى عدداً أو عمليةً لم
+      يبلغها؛ وفي الإنكليزية لا يقرأ كلمةً لم يتقنها سمعاً. وهذه ليست سياسةَ
+      تحريرٍ بل قاعدةُ برنامجٍ: فاحصٌ آليّ يرفض أيَّ محتوىً يخالفها قبل أن يصل
+      الطفلَ.</p></div>
+    <div class="blk"><b>المحسوسُ قبل الرمز</b>
+      <p>الحرفُ صوتاً قبل رسمه، والعددُ كميةً تُلمَس قبل رقمه، والكلمةُ الإنكليزية
+      سمعاً ومعنىً قبل حروفها، والحرفُ المكتوب حركةَ ذراعٍ قبل قلم. الرمزُ يأتي
+      تسميةً لشيءٍ يعرفه الطفل — لا لغزاً يبدأ به.</p></div>
+    <div class="blk"><b>الترتيبُ بالأثر لا بالأبجدية</b>
+      <p>تُقدَّم الحروفُ الأكثر استعمالاً أولاً فيقرأ الطفل كلماتٍ حقيقيةً من أول
+      أسبوع، وتُؤخَّر المتشابهاتُ ثم تُواجَه وجهاً لوجه في تمارين تمييزٍ خاصة،
+      ويُبنى كلُّ درسٍ ممّا قبله بناءً محسوباً.</p></div>
+    <div class="blk"><b>جلساتٌ قصيرة متباعدة</b>
+      <p>خمسُ دقائق كلَّ يوم خيرٌ من ساعةٍ في الأسبوع — فالتباعدُ هو الذي يثبّت.
+      الدرسُ ثلاثُ دقائق إلى خمس، ومراجعةُ اليوم تمارينُ معدودة من أخطاء الطفل
+      هو، ولا مؤقّتَ ولا صوتَ رسوبٍ ولا شاشةَ «خطأ» في العائلة كلِّها.</p></div>
   </div>
 </section>
 
 <section class="centers">
   <h2>للمدارس والمراكز التعليمية والتأهيلية</h2>
-  <p>التطبيقاتُ تصلح للبيت وللصفّ كما هي — ولوليّ الأمر والمعلّم لوحةُ متابعةٍ في كلٍّ
-  منها. وإن كانت لمركزكم حاجةٌ خاصة (إيقاعٌ أبطأ، محتوىً مطوَّع، متابعةٌ لمجموعات
-  أطفال، أو تكاملٌ مع أنظمتكم) فالمحرّكُ الذي بُنيت عليه العائلةُ يحتمل التطويعَ —
-  <a href="mailto:emad@uts.qa">راسلونا</a> نتحدث عمّا ينفع أطفالكم.</p>
+  <p>التطبيقاتُ تصلح للبيت وللصفّ كما هي: جهازٌ لكل طفل، وتقدّمُ كلٍّ في جهازه،
+  ولوحةُ متابعةٍ لوليّ الأمر والمعلم في كل تطبيق. وإن كانت لمركزكم حاجةٌ خاصة —
+  إيقاعٌ أبطأ لأطفالٍ يحتاجونه، محتوىً مطوَّع، متابعةٌ لمجموعات، أو تكاملٌ مع
+  أنظمتكم — فالمحرّكُ الذي بُنيت عليه العائلة يحتمل التطويع،
+  <a href="mailto:info@mishkat.qa">راسلونا</a> نتحدث عمّا ينفع أطفالكم.</p>
 </section>
 
 </main>
 
 <footer>
   <p>عائلة التعليم الأولي — <a href="https://mishkat.qa">مشكاة</a> · قطر<br>
-  <a href="mailto:emad@uts.qa">emad@uts.qa</a></p>
+  <a href="mailto:info@mishkat.qa">info@mishkat.qa</a></p>
 </footer>
 
 </body>
