@@ -189,6 +189,24 @@
         color: var(--ink-soft);
         font-size: 0.93em;
       }
+      .band {
+        max-width: 68rem;
+        margin: 0 auto;
+        padding: 1rem 1.25rem;
+        border-radius: var(--radius);
+        border: 2px solid color-mix(in srgb, var(--read) 30%, var(--line));
+        background: color-mix(in srgb, var(--read) 7%, var(--card));
+      }
+      .band p {
+        margin: 0;
+        color: var(--ink);
+        font-size: 0.98em;
+      }
+      .band a {
+        color: var(--read);
+        font-weight: 700;
+        white-space: nowrap;
+      }
       .centers {
         background: var(--paper-deep);
         border-radius: var(--radius);
@@ -232,6 +250,18 @@
         قطر.
       </p>
     </header>
+
+    <!-- **شريطُ الإنصاف تحت الصدر مباشرة** (أمر المالك، ١٧ أغسطس ٢٠٢٦: «وضعُ
+         الدعم في الواجهة أو بعدها مباشرة لأهميته»): سطران يُريان البابين لمن لا
+         يمرّر، والتفصيلُ يبقى في قسمه. -->
+    <div class="band" style="margin-bottom: 1.5rem">
+      <p>
+        <b>لكلِّ طفلٍ إيقاعُه</b> — <b>امتحانُ اللحاق</b> يبدأ بالطفل من مستواه
+        لا من الصفر، و<b>وضعُ الدعم</b> يمشي به في المنهج نفسِه بإيقاعٍ أهدأ
+        (لصعوبات التعلّم وتشتّت الانتباه). كلاهما اختياريّ من لوحة وليّ الأمر
+        ولا يُحتسب ما أُعين عليه إتقاناً — <a href="#pace">التفصيل هنا ↓</a>
+      </p>
+    </div>
 
     <main>
       <section>
@@ -509,7 +539,7 @@
       <!-- **بابا الإنصاف قسماً مستقلاً** (أمر المالك، ١٧ أغسطس ٢٠٢٦): كانا سطرين
            داخل فقرة المراكز فلا يراهما قارئٌ عابر — **وهما أكبرُ ما نقدّمه لطفلٍ
            لا يشبه المتوسط**. -->
-      <section>
+      <section id="pace">
         <h2>لكلِّ طفلٍ إيقاعُه — والمتعثّر لا يُترك</h2>
         <p class="sec-lede">
           ليس كلُّ طفلٍ يبدأ من الصفر، ولا كلُّهم يمشون بسرعةٍ واحدة. فبابان
