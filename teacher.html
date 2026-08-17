@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>حقيبةُ المعلّم — عائلة مشكاة للتعليم الأولي</title>
+    <meta
+      name="description"
+      content="حقيبةُ المعلّم: كيف تُشغّل تطبيقات مشكاة في الصفّ أو المركز — الحصةُ الأولى، والإيقاعُ الأسبوعي، وجدولُ القرار (متى امتحانُ اللحاق ومتى وضعُ الدعم)، وكيف تُقرأ لوحةُ المتابعة، وما لا يفعله التطبيق. صفحةٌ تُطبع."
+    />
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#FAF4E8" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="ar_QA" />
+    <meta property="og:site_name" content="عائلة التعليم الأولي — مشكاة" />
+    <meta property="og:title" content="حقيبةُ المعلّم — عائلة مشكاة" />
+    <meta
+      property="og:description"
+      content="كل ما يحتاجه المعلّم ليشغّل مشكاة في صفّه: الحصةُ الأولى، والإيقاعُ الأسبوعي، وجدولُ القرار، وقراءةُ لوحة المتابعة — وحدودُ ما يفعله التطبيق."
+    />
+    <meta property="og:url" content="https://learn.mishkat.qa/teacher.html" />
+    <meta
+      property="og:image"
+      content="https://learn.mishkat.qa/assets/og.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <style>
+      @font-face {
+        font-family: "Cairo";
+        src: url("assets/Cairo-arabic.woff2") format("woff2");
+        font-weight: 400 800;
+        font-display: swap;
+      }
+      :root {
+        --paper: #faf4e8;
+        --paper-deep: #f1e8d8;
+        --card: #ffffff;
+        --ink: #3d3428;
+        --ink-soft: #7a6e5d;
+        --line: #e5dac6;
+        --read: #2f7d5d;
+        --accent: #2f7d5d;
+        --radius: 18px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+        font-size: clamp(16px, 2.2vw, 18px);
+        line-height: 1.9;
+      }
+      main {
+        max-width: 54rem;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        border-bottom: 2px solid var(--line);
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .top img {
+        width: 46px;
+        height: 46px;
+      }
+      .top b {
+        font-size: 1.05em;
+      }
+      .top span {
+        color: var(--ink-soft);
+        font-size: 0.9em;
+      }
+      .top a {
+        margin-inline-start: auto;
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      h1 {
+        font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+        font-weight: 800;
+        margin: 0 0 0.5rem;
+      }
+      .lede {
+        color: var(--ink-soft);
+        margin: 0 0 2rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin: 2.5rem 0 0.3rem;
+        padding-inline-start: 0.6rem;
+        border-inline-start: 5px solid var(--accent);
+      }
+      h2 + p {
+        color: var(--ink-soft);
+        margin-top: 0.2rem;
+      }
+      .box {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.1rem 1.3rem;
+        margin: 1rem 0;
+      }
+      .box--warn {
+        background: var(--paper-deep);
+        border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95em;
+      }
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 0.6rem 0.75rem;
+        text-align: start;
+        vertical-align: top;
+      }
+      th {
+        background: var(--paper-deep);
+        font-weight: 800;
+      }
+      ol,
+      ul {
+        margin: 0.5rem 0;
+        padding-inline-start: 1.4rem;
+      }
+      li {
+        margin-bottom: 0.35rem;
+      }
+      .apps-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin: 1rem 0;
+      }
+      .pill {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        padding: 0.35rem 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--ink);
+      }
+      footer {
+        margin-top: 3rem;
+        border-top: 1px solid var(--line);
+        padding-top: 1.2rem;
+        color: var(--ink-soft);
+        font-size: 0.9em;
+      }
+      footer a {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      @media print {
+        body {
+          background: #fff;
+          font-size: 11pt;
+          line-height: 1.6;
+        }
+        main {
+          max-width: none;
+          padding: 0;
+        }
+        h2 {
+          break-after: avoid;
+          margin-top: 1.2rem;
+        }
+        .box,
+        table {
+          break-inside: avoid;
+        }
+        .top a {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <img src="assets/mark.svg" alt="علامة عائلة التعليم الأولي" width="46" height="46" />
+        <div>
+          <b>عائلةُ مشكاة للتعليم الأولي</b><br />
+          <span>learn.mishkat.qa</span>
+        </div>
+        <a href="./">← البوابة</a>
+      </div>
+
+      <h1>حقيبةُ المعلّم</h1>
+      <p class="lede">
+        صفحةٌ واحدة تكفي لتشغيل مشكاة في صفٍّ أو مركزٍ أو روضة: ماذا تفعل في
+        الحصة الأولى، وكيف يكون الإيقاع، ومتى تفتح امتحانَ اللحاق ومتى وضعَ
+        الدعم، وكيف تقرأ لوحةَ المتابعة — <b>وما لا يفعله التطبيق</b>.
+        <b>وهي معدّةٌ للطباعة</b> (اطبعها من متصفّحك وعلّقها في الصفّ).
+      </p>
+
+      <h2>قبل الحصة — عشر دقائق مرّةً واحدة</h2>
+      <div class="box">
+        <ol>
+          <li>
+            <b>جهازٌ لكل طفل.</b> التقدّم يُحفظ في الجهاز نفسه لا في حساب —
+            فجهازان يعني طفلين مستقلَّين، <b>وجهازٌ واحد لطفلين يخلط رحلتيهما
+            وقياسَهما</b>.
+          </li>
+          <li>
+            <b>ثبّت التطبيق على كل جهاز</b> (يُضاف إلى الشاشة بنقرتين، بلا متجر
+            وبلا حساب). وعلى الآيباد والآيفون افتحه في <b>سفاري</b>.
+          </li>
+          <li>
+            <b>افتحه مرّةً وهو متصلٌ بالإنترنت</b> واتركه دقائق ليخزّن الأصوات
+            والقصص — بعدها يعمل <b>دون إنترنت</b> تماماً.
+          </li>
+          <li>
+            <b>افتح لوحة وليّ الأمر مرّةً وتعرّف عليها</b> (زرُّ «وليّ الأمر»
+            أعلى الخريطة، ثم مسألةُ ضربٍ بسيطة لا يحلّها طفلُ الخامسة).
+          </li>
+        </ol>
+        <div class="apps-row">
+          <a class="pill" href="https://read.mishkat.qa/" target="_blank" rel="noopener">اِقْرَأْ — القراءة</a>
+          <a class="pill" href="https://write.mishkat.qa/" target="_blank" rel="noopener">اُكْتُبْ — الكتابة</a>
+          <a class="pill" href="https://calc.mishkat.qa/" target="_blank" rel="noopener">اِحْسِبْ — الحساب</a>
+          <a class="pill" href="https://listen.mishkat.qa/" target="_blank" rel="noopener">اِسْمَعْ — الإنكليزية</a>
+        </div>
+      </div>
+
+      <h2>الحصةُ الأولى — ولا تزد عليها</h2>
+      <div class="box">
+        <ol>
+          <li><b>اجلس مع الطفل في أول درسين</b> لتعرف الإيقاع، ثم اتركه.</li>
+          <li>
+            <b>الدرسُ ثلاثُ دقائق إلى خمس.</b> الحصةُ الجيدة: درسٌ أو درسان
+            <b>ومراجعةُ اليوم</b> — لا جلسةٌ طويلة.
+          </li>
+          <li>
+            <b>ابدأ دائماً بـ«مراجعة اليوم»</b> إن ظهرت فوق الخريطة: تمارينُ من
+            أخطاء الطفل نفسِه، تُنجَز في دقائق. <b>تثبيتُ المتزعزع أولى من درسٍ
+            جديد يُبنى عليه.</b>
+          </li>
+          <li>
+            <b>اطلب منه أن يقرأ بصوتٍ عالٍ قبل أن يضغط زرّ السماع</b> — فالسماعُ
+            مكافأةٌ بعد المحاولة لا بديلٌ عنها.
+          </li>
+          <li>
+            <b>لا تصحّح كلَّ زلّةٍ في القصة</b>: القصةُ قراءةٌ لا امتحان.
+          </li>
+        </ol>
+      </div>
+
+      <h2>الإيقاعُ الأسبوعي</h2>
+      <table>
+        <tr>
+          <th>اليوم</th>
+          <th>ماذا يفعل الطفل</th>
+          <th>ماذا تفعل أنت</th>
+        </tr>
+        <tr>
+          <td>الأحد–الخميس</td>
+          <td>مراجعةُ اليوم + محطةٌ واحدة (٥–١٠ دقائق)</td>
+          <td>تمرّ على من توقّف، ولا تدفع من يمشي</td>
+        </tr>
+        <tr>
+          <td>مرّةً في الأسبوع</td>
+          <td>—</td>
+          <td>
+            افتح لوحةَ المتابعة لكل طفل: من يتعثّر؟ ومن لم يفتح التطبيق أصلاً؟
+          </td>
+        </tr>
+        <tr>
+          <td>في اُكْتُبْ خاصة</td>
+          <td>يكتب على الجهاز</td>
+          <td>
+            <b>ثم أغلق التطبيق واكتب على الورق</b> ما تعلّمه اليوم — التطبيق بلا
+            ورقةٍ نصفُ عمل
+          </td>
+        </tr>
+      </table>
+
+      <h2>جدولُ القرار — الحالةُ وما تفعله</h2>
+      <table>
+        <tr>
+          <th>حالُ الطفل</th>
+          <th>ماذا تفعل</th>
+          <th>من أين</th>
+        </tr>
+        <tr>
+          <td><b>يعرف بعض حروفه أو أعداده أصلاً</b> (تلميذُ مدرسةٍ أو ملتحقٌ متأخر)</td>
+          <td>
+            افتح له <b>امتحانَ اللحاق</b>: يصعد مجموعةً مجموعة، فيُفتح له ما
+            أثبته ويقف عند أوّل تعثّر — <b>ويبدأ من مستواه لا من الصفر</b>
+          </td>
+          <td>لوحةُ وليّ الأمر ← قسمُ امتحان اللحاق</td>
+        </tr>
+        <tr>
+          <td>
+            <b>يتعثّر أو يتشتّت أو يحتاج وتيرةً أبطأ</b> (صعوبةُ تعلّم، تشتّتُ
+            انتباه)
+          </td>
+          <td>
+            شغّل <b>وضعَ الدعم</b>: جلسةٌ أقصر، وتكرارٌ أقرب، وخيارٌ أضيق، وصوتٌ
+            أبطأ، وشاشةٌ أهدأ — <b>والمنهجُ هو هو لا يتبدّل حرفٌ منه</b>
+          </td>
+          <td>لوحةُ وليّ الأمر ← قسمُ وضع الدعم</td>
+        </tr>
+        <tr>
+          <td><b>يقف عند بوّابة إتقانٍ مرّاتٍ</b></td>
+          <td>
+            لا تدفعه إلى الأمام — <b>أعِد معه أصواتَ حروفه المتعثّرة بصوتك أنت</b>.
+            والبوّابةُ تعيد بناء تمارينها في كل محاولة، بلا حدٍّ ولا عقاب
+          </td>
+          <td>اللوحة تريك الحروفَ المتعثّرة بالضبط</td>
+        </tr>
+        <tr>
+          <td><b>يمشي بلا عائق</b></td>
+          <td><b>لا تتدخّل.</b> اتركه ولا تسرّعه ولا تضف له محطات</td>
+          <td>—</td>
+        </tr>
+      </table>
+      <div class="box box--warn">
+        <b>وعلامةٌ تعرفها بنظرة:</b> ما دام وضعُ الدعم مشتغلاً على جهازٍ فثمّة
+        علامةٌ هادئة في شريط التطبيق أعلى الشاشة — <b>بلا كلمةٍ تَسِمُ الطفل</b>،
+        يراها المعلّم ولا تشغل الطفل. <b>وامتحانُ اللحاق يبقى بمسطرةٍ واحدة</b>:
+        يهدأ ويبطئ لمن يحتاج، <b>ولا يُسهَّل</b> — فما يُفتَح للطفل مُثبَتٌ لا
+        ممنوح.
+      </div>
+
+      <h2>كيف تُقرأ لوحةُ المتابعة</h2>
+      <p>
+        ليست لوحةَ درجات: <b>تقول أين يتعثّر بالضبط، لا كم أصاب</b>.
+      </p>
+      <div class="box">
+        <ul>
+          <li><b>توصيةُ اليوم</b> — جملةٌ واحدة وزرٌّ ينفّذها.</li>
+          <li>
+            <b>المتقَن والمتعثّر</b> — في اقرأ: حرفاً بحركةٍ بنوع تمرين. وهذا
+            أنفعُ ما فيها لجلسةٍ فردية.
+          </li>
+          <li><b>دقائقُ الأسبوع</b> — عموداً لكل يوم: من يفتح التطبيق فعلاً؟</li>
+          <li><b>أين هو الآن</b> — المحطةُ التالية بالاسم.</li>
+          <li>
+            <b>ونسخةٌ احتياطية</b> — ملفٌّ تحفظه من الجهاز (وبه تنقل تقدّمَ الطفل
+            إلى جهازٍ آخر، أو تُطلع الأسرةَ على حاله).
+          </li>
+        </ul>
+      </div>
+
+      <h2>ما لا يفعله التطبيق — قبل أن تسأل</h2>
+      <div class="box box--warn">
+        <ul>
+          <li>
+            <b>لا يشخّص ولا يعالج</b>، وليس بديلاً عن مختصّ — خطةُ الطفل عندكم
+            لا عندنا.
+          </li>
+          <li>
+            <b>لا يحكم على نطق الطفل</b>: لا تقييمَ آلياً للكلام — التقنيةُ لا
+            تُتقنه اليوم، ومَن يَعِد به يَعِد بما لا يفي.
+          </li>
+          <li>
+            <b>لا يخدم اليومَ</b> الكفيفَ ولا الأصمَّ المُشير ولا الطفلَ غير
+            الناطق — هؤلاء يحتاجون منهجاً آخر لا إعداداً آخر.
+          </li>
+          <li>
+            <b>ولا نَعِد بحجم أثر</b>: وضعُ الدعم في تجربةٍ ميدانية الآن، وما
+            يخرج منها يحدّد ما نبنيه بعده.
+          </li>
+        </ul>
+      </div>
+
+      <h2>الخصوصية — ما تقوله للأهل</h2>
+      <div class="box">
+        <p style="margin: 0">
+          لا حساب، ولا تسجيل، ولا تتبّع، ولا جمعَ بيانات. <b>تقدّمُ الطفل في
+          جهازه هو</b>، وصوتُه وقلمُه <b>لا يغادران الجهاز أبداً</b>. وكلُّ ما
+          يخرج منه يخرج <b>بيدك أنت</b>: ملفُّ نسخةٍ احتياطية تحفظه أو ترسله إن
+          شئت. <b>ومجانيةٌ بلا إعلانات — الآن ودائماً.</b>
+        </p>
+      </div>
+
+      <h2>حين تجرّبها في صفّك — أخبرنا</h2>
+      <div class="box">
+        <p style="margin: 0">
+          <b>بلاغُ الميدان عندنا سيدُ الأدلة</b>: ما تراه عينُ معلّمٍ مع أطفالٍ
+          حقيقيين غيّر قرارات كبرى في تطبيقاتنا أكثرَ من مرة. فإن أربك التطبيقُ
+          طفلاً، أو وقف عند زرٍّ لا يفهمه، أو احتاج معلّمُك ما لا يجده —
+          <b>اكتب لنا</b>: <a href="mailto:info@mishkat.qa">info@mishkat.qa</a>
+          · واتساب <b>+974 3388 2806</b>. (ومن داخل كل تطبيق: لوحةُ وليّ الأمر ←
+          «بلِّغنا».)
+        </p>
+      </div>
+
+      <footer>
+        <p>
+          عائلةُ مشكاة للتعليم الأولي — <a href="./">learn.mishkat.qa</a> ·
+          مجاناً بلا إعلانات · بخصوصيةٍ مطلقة · وتعمل دون إنترنت. من مشكاة، قطر.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
