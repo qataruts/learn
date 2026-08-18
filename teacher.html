@@ -78,6 +78,10 @@
         color: var(--ink-soft);
         font-size: 0.9em;
       }
+      /* **لا عنوانَ شبكيٌّ معروضٌ في شاشة** (سنّةُ المالك، ١٧ أغسطس ٢٠٢٦):
+         يبقى في ترويسة المطبوع وحدَها — ورقٌ لا يُنقَر، ومَن طبعها لمركزٍ
+         يحتاج العنوانَ ليكتبه بيده. */
+      .print-only { display: none; }
       .top a {
         margin-inline-start: auto;
         color: var(--accent);
@@ -167,6 +171,7 @@
         font-weight: 700;
       }
       @media print {
+        .print-only { display: inline; }
         body {
           background: #fff;
           font-size: 11pt;
@@ -196,7 +201,7 @@
         <img src="assets/mark.svg" alt="علامة عائلة التعليم الأولي" width="46" height="46" />
         <div>
           <b>عائلةُ مشكاة للتعليم الأولي</b><br />
-          <span>learn.mishkat.qa</span>
+          <span class="print-only">learn.mishkat.qa</span>
         </div>
         <a href="./">← البوابة</a>
       </div>
@@ -424,7 +429,7 @@
 
       <footer>
         <p>
-          عائلةُ مشكاة للتعليم الأولي — <a href="./">learn.mishkat.qa</a> ·
+          عائلةُ مشكاة للتعليم الأولي — <a href="./">بوابةُ العائلة</a> ·
           مجاناً بلا إعلانات · بخصوصيةٍ مطلقة · وتعمل دون إنترنت. من مشكاة، قطر.
         </p>
       </footer>
